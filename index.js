@@ -36,7 +36,11 @@ function createRecipe () {
   function recipeData(){
   const ingredientFields = document.getElementsByName('ingredients')
   let ingredients = []
-  for(let i = 0; i < ingredientFields.length; i++){ ingredients.push(ingredientFields[i].value)}
+  for(let i = 0; i < ingredientFields.length; i++){
+    if(ingredientsNodes[i].value !== "") {
+      ingredients.push(ingredientsNodes[i].value)
+    }
+  }
   const name = document.getElementById("name").value
   const description = document.getElementById('description').value
   const recipe = {name, ingredients, description}
