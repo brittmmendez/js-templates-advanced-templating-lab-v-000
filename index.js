@@ -36,7 +36,7 @@ function createRecipe () {
   function recipeData(){
   const ingredientFields = document.getElementsByName('ingredients')
   let ingredients = []
-  for(let i = 0; i < ingredientFields.length; i++){ 
+  for(let i = 0; i < ingredientFields.length; i++){
     if(ingredientFields[i].value !== "") {
     ingredients.push(ingredientFields[i].value)
   }
@@ -48,13 +48,13 @@ function createRecipe () {
 }
 
 function displayEditForm() {
-  let name = document.getElementById("nameDisplay").innerText
-  let description = document.getElementById("recipeDescription").innerText
   let ingredientsNodes = document.getElementsByName("ingredientsList")
   let ingredients = []
   for(let i=0;i<ingredientsNodes.length;i++) {
     ingredients.push(ingredientsNodes[i].innerText)
   }
+  let name = document.getElementById("nameDisplay").innerText
+  let description = document.getElementById("recipeDescription").innerText
   let recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
   let recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
   let template = Handlebars.compile(recipeFormTemplate)
