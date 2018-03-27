@@ -48,10 +48,10 @@ function createRecipe () {
 }
 
 function displayEditForm() {
-  let ingredientsNodes = document.getElementsByName("ingredientsList")
+  let ingredientFields = document.getElementsByName("ingredientsList")
   let ingredients = []
-  for(let i=0;i<ingredientsNodes.length;i++) {
-    ingredients.push(ingredientsNodes[i].innerText)
+  for(let i=0;i<ingredientFields.length;i++) {
+    ingredients.push(ingredientFields[i].innerText)
   }
   let name = document.getElementById("nameDisplay").innerText
   let description = document.getElementById("recipeDescription").innerText
