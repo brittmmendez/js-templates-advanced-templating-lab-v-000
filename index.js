@@ -37,8 +37,8 @@ function createRecipe () {
   const ingredientFields = document.getElementsByName('ingredients')
   let ingredients = []
   for(let i = 0; i < ingredientFields.length; i++){
-    if(ingredientsNodes[i].value !== "") {
-      ingredients.push(ingredientsNodes[i].value)
+    if(ingredientFields[i].value !== "") {
+      ingredients.push(ingredientFields[i].value)
     }
   }
   const name = document.getElementById("name").value
