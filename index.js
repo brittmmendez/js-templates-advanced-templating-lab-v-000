@@ -44,16 +44,16 @@ function createRecipe () {
 }
 
 function displayEditForm() {
-  var name = document.getElementById("nameDisplay").innerText
-  var description = document.getElementById("recipeDescription").innerText
-  var ingredientsNodes = document.getElementsByName("ingredientsList")
-  var ingredients = []
-  for(var i=0;i<ingredientsNodes.length;i++) {
+  let name = document.getElementById("nameDisplay").innerText
+  let description = document.getElementById("recipeDescription").innerText
+  let ingredientsNodes = document.getElementsByName("ingredientsList")
+  let ingredients = []
+  for(let i=0;i<ingredientsNodes.length;i++) {
     ingredients.push(ingredientsNodes[i].innerText)
   }
-  var recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
-  var recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
-  var template = Handlebars.compile(recipeFormTemplate)
+  let recipe = {name, description, ingredients, submitAction: 'createRecipe()'}
+  let recipeFormTemplate = document.getElementById("recipe-form-template").innerHTML
+  let template = Handlebars.compile(recipeFormTemplate)
   document.getElementById("main").innerHTML = template(recipe)
 }
 
